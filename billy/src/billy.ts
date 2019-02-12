@@ -24,7 +24,7 @@ const a: any = {
 export class Billy extends Application {
 
     @Lane('This is an example lane.\nThe only thing it really does is output Hello World! 👾')
-    async generate_readme() {
+    async generateReadme() {
 
         console.log(Object.keys(a).map(key => a[key]));
 
@@ -42,6 +42,38 @@ export class Billy extends Application {
         this.writeText('./readme.md', table);
     }
 
+    @Lane('Publish @fivethree/billy-plugin-markdown')
+    async publishMarkdownPlugin() {
+        await this.updatePluginVersion('../markdown');
+        await this.publishPlugin('../markdown');
+    }
+
+    private async publishPlugin(path: string) {
+        await this.exec(`cd ${path} && npm run build && npm publish`, true);
+    }
+
+    private async updatePluginVersion(path: string) {
+        const answer = await this.prompt([
+            {
+                type: 'list',
+                name: 'update',
+                message: 'Which version do you want to update the Markdown Plugin too?',
+                choices: [
+                    { name: 'Patch', value: 0 },
+                    { name: 'Minor', value: 1 },
+                ]
+            }
+        ]);
+
+        switch (answer.update) {
+            case 0:
+                await this.exec(`cd ${path} && npm version patch`, true);
+                break;
+            case 1:
+                await this.exec(`cd ${path} && npm version minor`, true);
+                break;
+        }
+    }
 }
 
 
