@@ -3,7 +3,7 @@
  */
 import { CorePlugin } from '@fivethree/billy-plugin-core';
 import { usesPlugins } from '@fivethree/billy-core';
-import { Markdown } from '@fivethree/markdown';
+import { Markdown } from '@fivethree/billy-plugin-markdown';
 
 //we need this line for intellisense :)
 export interface Application extends CorePlugin, Markdown {}

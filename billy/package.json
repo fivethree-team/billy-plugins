@@ -18,8 +18,8 @@
     "author": "garygrossgarten",
     "license": "MIT",
     "devDependencies": {
-        "axios": "0.18.0",
         "@types/node": "10.12.25",
+        "axios": "0.18.0",
         "nodemon": "1.18.10",
         "ts-node": "7.0.1",
         "typescript": "3.3.3",
@@ -28,12 +28,12 @@
     "dependencies": {
         "@fivethree/billy-core": "0.7.0",
         "@fivethree/billy-plugin-core": "0.7.0",
-        "@fivethree/markdown": "file:../markdown"
+        "@fivethree/billy-plugin-markdown": "file:../markdown"
     },
     "billy": {
         "plugins": [
             "@fivethree/billy-plugin-core",
-            "@fivethree/markdown"
+            "@fivethree/billy-plugin-markdown"
         ]
     }
 }

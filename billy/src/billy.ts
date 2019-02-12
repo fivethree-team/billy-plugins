@@ -1,6 +1,6 @@
 import { App, Lane } from "@fivethree/billy-core";
 import { Application } from "./generated/application";
-import { TableHeader } from "@fivethree/markdown/dist/plugin";
+import { TableHeader } from "@fivethree/billy-plugin-markdown/dist/plugin";
 
 const a: any = {
     "ion-anchor": {
