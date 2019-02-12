@@ -5,37 +5,47 @@ const markdown = require("markdown").markdown;
 export class Markdown {
 
     @Action('H1 Header')
-    headerH1(content: string): string {
+    mdH1(content: string): string {
         return `${this.header(1)} ${content}`;;
     }
 
     @Action('H2 Header')
-    headerH2(content: string): string {
+    mdH2(content: string): string {
         return `${this.header(2)} ${content}`;
     }
 
     @Action('H3 Header')
-    headerH3(content: string): string {
+    mdH3(content: string): string {
         return `${this.header(3)} ${content}`;
     }
 
     @Action('H4 Header')
-    headerH4(content: string): string {
+    mdH4(content: string): string {
         return `${this.header(4)} ${content}`;
     }
 
     @Action('H5 Header')
-    headerH5(content: string): string {
+    mdH5(content: string): string {
         return `${this.header(5)} ${content}`;
     }
 
     @Action('H6 Header')
-    headerH6(content: string): string {
+    mdH6(content: string): string {
         return `${this.header(6)} ${content}`;
     }
 
+    @Action('Url')
+    mdUrl(url: string, text: string = url): string {
+        return `[${text}](${url})`;
+    }
+
+    @Action('Comment')
+    mdComment(comment: string): string {
+        return `<!-- ${comment} -->`;
+    }
+
     @Action('Table')
-    createTable(headers: TableHeader[], rows: any[]) {
+    mdTable(headers: MarkdownTableHeader[], rows: any[]) {
         const content: string[] = [];
 
         const titles = headers.map(header => header.title);
@@ -60,16 +70,15 @@ export class Markdown {
             this.addContent(content, rowValues.join('|'));
         });
 
-        return this.joinContent(content);
+        return this.mdJoinContent(content);
     }
 
     @Action('Join Content')
-    joinContent(content: string[]): string {
+    mdJoinContent(content: string[]): string {
         return content.join('\n');
     }
 
-    @Action('Add content')
-    addContent(content: string[], newContent): string[] {
+    private addContent(content: string[], newContent): string[] {
         content.push(newContent);
         return content;
     }
@@ -79,17 +88,16 @@ export class Markdown {
     }
 
     @Action('Hello World')
-    markdownToHTML(content: string): string {
-        console.log(content);
+    mdToHTML(content: string): string {
         return markdown.toHTML(content);
     }
 
 }
 
-export class TableHeader {
+export class MarkdownTableHeader {
     key: string;
     title: string;
-    alignment?: Alignment;
+    alignment?: MarkdownTableAlignment;
 }
 
-export type Alignment = 'centered' | 'right' | 'left';
+export type MarkdownTableAlignment = 'centered' | 'right' | 'left';
