@@ -18,12 +18,12 @@
     "author": "garygrossgarten",
     "license": "MIT",
     "devDependencies": {
-        "axios": "^0.18.0",
-        "@types/node": "^10.12.18",
-        "nodemon": "^1.18.9",
-        "ts-node": "^7.0.1",
-        "typescript": "^3.2.2",
-        "typescript-ioc": "^1.2.4"
+        "axios": "0.18.0",
+        "@types/node": "10.12.25",
+        "nodemon": "1.18.10",
+        "ts-node": "7.0.1",
+        "typescript": "3.3.3",
+        "typescript-ioc": "1.2.4"
     },
     "dependencies": {
         "@fivethree/billy-core": "0.7.0",
