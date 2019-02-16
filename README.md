@@ -1,9 +1,11 @@
 # Billy Plugins
 
-
 <!-- Auto Generated Below -->
 
-## Plugins
+# Table of Content
+* [Plugins](#plugins)
+
+# Plugins
 Plugin|Documentation
 ---|---
 Markdown|[Readme](./markdown)
