@@ -18,7 +18,7 @@
     "author": "garygrossgarten",
     "license": "MIT",
     "devDependencies": {
-        "@fivethree/billy-core": "0.7.0",
+        "@fivethree/billy-core": "0.8.0",
         "@types/node": "10.12.25",
         "axios": "0.18.0",
         "nodemon": "1.18.10",
