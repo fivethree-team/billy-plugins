@@ -15,14 +15,14 @@
         "node",
         "terminal"
     ],
-    "author": "garygrossgarten",
+    "author": "Marc Stammerjohann",
     "license": "MIT",
     "devDependencies": {
-        "@fivethree/billy-core": "0.7.0",
+        "@fivethree/billy-core": "0.8.0",
         "@types/node": "10.12.25",
         "axios": "0.18.0",
         "nodemon": "1.18.10",
-        "ts-node": "7.0.1",
+        "ts-node": "8.0.2",
         "typescript": "3.3.3"
     },
     "dependencies": {
