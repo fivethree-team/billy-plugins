@@ -1,6 +1,6 @@
 {
     "name": "@fivethree/billy-plugin-notify",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "example plugin for billy - your personal cli assistant.",
     "main": "dist/index.js",
     "scripts": {

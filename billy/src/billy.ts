@@ -103,7 +103,7 @@ export class Billy extends Application {
     }
 
     private async publishPlugin(path: string) {
-        await this.exec(`cd ${path} && npm run build && npm publish`, true);
+        await this.exec(`cd ${path} && npm run build && npm publish --access=public`, true);
     }
 
     private async updatePluginVersion(path: string) {
