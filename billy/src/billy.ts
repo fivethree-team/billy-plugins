@@ -47,11 +47,6 @@ export class Billy extends Application {
     @Lane('Generate Readme 👾')
     async readme() {
 
-        console.log(process.listeners('exit').length)
-        process.listeners('exit').forEach((v) => {
-            return console.log(v.arguments,v.caller,v.name,v.toString());
-        })
-
         const headers: MarkdownTableHeader[] = [
             {
                 key: 'name',
@@ -144,6 +139,11 @@ export class Billy extends Application {
         await this.cleanPlugins(...plugins);
     }
 
+    @Lane('Clean install plugins')
+    async publish() {
+        await this.publishPlugins(...plugins);
+    }
+
     async buildPlugins(...plugins: Plugin[]) {
         if (plugins && plugins.length > 0) {
             await processAsyncArray(plugins, async (plugin: Plugin) => {
@@ -156,6 +156,14 @@ export class Billy extends Application {
         if (plugins && plugins.length > 0) {
             await processAsyncArray(plugins, async (plugin: Plugin) => {
                 await this.exec(`cd ${plugin.path} && npm run refresh`, true)
+            })
+        }
+    }
+    async publishPlugins(...plugins: Plugin[]) {
+        if (plugins && plugins.length > 0) {
+            await processAsyncArray(plugins, async (plugin: Plugin) => {
+                await this.updatePluginVersion(plugin.path);
+                await this.publishPlugin(plugin.path);
             })
         }
     }
