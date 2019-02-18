@@ -26,14 +26,30 @@
         "typescript-ioc": "1.2.4"
     },
     "dependencies": {
-        "@fivethree/billy-core": "0.8.0",
-        "@fivethree/billy-plugin-core": "0.8.0",
-        "@fivethree/billy-plugin-markdown": "file:../markdown"
+        "@fivethree/billy-core": "0.8.1",
+        "@fivethree/billy-plugin-core": "0.8.1",
+        "@fivethree/billy-plugin-markdown": "file:../markdown",
+        "@fivethree/billy-plugin-docs": "file:../billy-docs",
+        "@fivethree/billy-plugin-docx": "file:../docx",
+        "@fivethree/billy-plugin-google": "file:../google",
+        "@fivethree/billy-plugin-ngrok": "file:../ngrok",
+        "@fivethree/billy-plugin-notify": "file:../notify",
+        "@fivethree/billy-plugin-telegram": "file:../telegram",
+        "@fivethree/billy-plugin-toggl": "file:../toggl",
+        "@fivethree/billy-plugin-twitter": "file:../twitter"
     },
     "billy": {
         "plugins": [
             "@fivethree/billy-plugin-core",
-            "@fivethree/billy-plugin-markdown"
+            "@fivethree/billy-plugin-markdown",
+            "@fivethree/billy-plugin-docs",
+            "@fivethree/billy-plugin-docx",
+            "@fivethree/billy-plugin-google",
+            "@fivethree/billy-plugin-ngrok",
+            "@fivethree/billy-plugin-notify",
+            "@fivethree/billy-plugin-telegram",
+            "@fivethree/billy-plugin-toggl",
+            "@fivethree/billy-plugin-twitter"
         ]
     }
 }

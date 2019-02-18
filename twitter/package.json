@@ -1,0 +1,30 @@
+{
+    "name": "@fivethree/billy-plugin-twitter",
+    "version": "0.0.1",
+    "description": "twitter plugin for billy framework",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "node_modules/.bin/tsc -p .",
+        "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+        "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+    },
+    "keywords": [
+        "typescript",
+        "cli",
+        "node",
+        "terminal"
+    ],
+    "author": "garygrossgarten",
+    "license": "MIT",
+    "devDependencies": {
+        "axios": "^0.18.0",
+        "@types/node": "^10.12.18",
+        "nodemon": "^1.18.9",
+        "ts-node": "^7.0.1",
+        "typescript": "^3.2.2"
+    },
+    "dependencies": {
+        "twitter": "^1.7.1",
+        "@fivethree/billy-core": "0.8.1"
+    }
+}

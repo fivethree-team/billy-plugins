@@ -1,0 +1,1 @@
+export { GoogleApiPlugin } from './plugin';
