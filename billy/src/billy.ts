@@ -139,7 +139,7 @@ export class Billy extends Application {
         await this.cleanPlugins(...plugins);
     }
 
-    @Lane('Clean install plugins')
+    @Lane('Publish all plugins')
     async publish() {
         await this.publishPlugins(...plugins);
     }
