@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "@fivethree/billy-core": "0.8.1",
-        "@fivethree/billy-plugin-core": "0.8.1",
+        "@fivethree/billy-plugin-core": "0.9.2",
         "@fivethree/billy-plugin-markdown": "file:../markdown",
         "@fivethree/billy-plugin-docs": "file:../billy-docs",
         "@fivethree/billy-plugin-docx": "file:../docx",
