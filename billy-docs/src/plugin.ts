@@ -1,5 +1,5 @@
 import { Plugin, Action } from '@fivethree/billy-core';
-import { Project, ClassDeclaration, SourceFile, Decorator, MethodDeclaration } from "ts-morph";
+import { Project, ClassDeclaration, SourceFile, MethodDeclaration } from "ts-morph";
 import { BillyDocumentation, BillyMethodDocumentation, Param, BillyActionDocumentation, BillyPluginDocumentation, ReturnDoc, ParamDoc } from './types'
 import cronstrue from 'cronstrue';
 

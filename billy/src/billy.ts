@@ -1,7 +1,7 @@
 import { App, Lane } from "@fivethree/billy-core";
-import { Application } from "./generated/application";
 import { MarkdownTableHeader } from "@fivethree/billy-plugin-markdown";
 import { BillyMethodDocumentation } from "@fivethree/billy-plugin-docs";
+import { Plugins } from "./plugins";
 
 export const plugins: Plugin[] = [{
     name: 'Markdown',
@@ -42,7 +42,7 @@ export const plugins: Plugin[] = [{
 }]
 
 @App({ allowUnknownOptions: true })
-export class Billy extends Application {
+export class Billy extends Plugins {
 
     @Lane('Generate Readme 👾')
     async readme() {
