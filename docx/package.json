@@ -24,7 +24,7 @@
         "typescript": "^3.2.2"
     },
     "dependencies": {
-        "@fivethree/billy-core": "0.9.2",
+        "@fivethree/billy-core": "0.18.0",
         "docxtemplater": "^3.9.7",
         "jszip": "^2.6.1"
     }
