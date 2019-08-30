@@ -1,7 +1,7 @@
 {
   "name": "@fivethree/billy-plugin-git",
-  "version": "0.1.0",
-  "description": "simple git plugin for billy",
+  "version": "0.1.1",
+  "description": "simple git plugin",
   "main": "dist/index.js",
   "scripts": {
     "build": "node_modules/.bin/tsc -p ."
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^10.12.18",
     "ts-node": "^7.0.1",
+    "nodemon": "^1.18.9",
     "@fivethree/billy-core": "0.15.4",
     "typescript": "^3.2.2"
   },
