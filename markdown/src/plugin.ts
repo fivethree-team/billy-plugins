@@ -74,6 +74,10 @@ export class Markdown {
     mdComment(comment: string): string {
         return `<!-- ${comment} -->`;
     }
+    @Action('Text')
+    mdText(text: string): string {
+        return text;
+    }
 
     @Action('Table')
     mdTable(headers: MarkdownTableHeader[], rows: any[]) {
@@ -186,6 +190,11 @@ export class MarkdownBuilder {
 
     comment(comment: string): MarkdownBuilder {
         this.addContent(this.md.mdComment(comment));
+        return this;
+    }
+
+    text(text: string): MarkdownBuilder {
+        this.addContent(this.md.mdText(text));
         return this;
     }
 

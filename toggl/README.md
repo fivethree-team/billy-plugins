@@ -1,23 +1,3 @@
-# Table of Content
-* [toggl](#toggl)
-  * [TogglPlugin](#togglplugin)
-  * [Actions](#actions)
-# Table of Content
-* [toggl](#toggl)
-  * [TogglPlugin](#togglplugin)
-  * [Actions](#actions)
-# Table of Content
-* [toggl](#toggl)
-  * [TogglPlugin](#togglplugin)
-  * [Actions](#actions)
-# Table of Content
-* [toggl](#toggl)
-  * [TogglPlugin](#togglplugin)
-  * [Actions](#actions)
-# Table of Content
-* [toggl](#toggl)
-  * [TogglPlugin](#togglplugin)
-  * [Actions](#actions)
 <!-- Auto Generated Below -->
 
 # Table of Content
