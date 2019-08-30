@@ -1,6 +1,6 @@
 {
   "name": "@fivethree/billy-plugin-git",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "simple git plugin",
   "main": "dist/index.js",
   "scripts": {
@@ -18,10 +18,10 @@
     "@types/node": "^10.12.18",
     "ts-node": "^7.0.1",
     "nodemon": "^1.18.9",
-    "@fivethree/billy-core": "0.15.4",
+    "@fivethree/billy-core": "0.17.0",
     "typescript": "^3.2.2"
   },
   "dependencies": {
-    "simple-git": "^1.107.0"
+    "simple-git": "1.124.0"
   }
 }
