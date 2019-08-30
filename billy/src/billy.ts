@@ -1,4 +1,4 @@
-import { App, Lane } from "@fivethree/billy-core";
+import { App, Command } from "@fivethree/billy-core";
 import { MarkdownTableHeader } from "@fivethree/billy-plugin-markdown";
 import { BillyMethodDocumentation } from "@fivethree/billy-plugin-docs";
 import { Plugins } from "./plugins";
@@ -44,7 +44,7 @@ export const plugins: Plugin[] = [{
 @App({ allowUnknownOptions: true })
 export class Billy extends Plugins {
 
-    @Lane('Generate Readme 👾')
+    @Command('Generate Readme 👾')
     async readme() {
 
         const headers: MarkdownTableHeader[] = [
@@ -91,12 +91,12 @@ export class Billy extends Plugins {
         this.writeText('../README.md', readmeContent + pluginContent);
     }
 
-    @Lane('Generate Plugins Readme 👾')
+    @Command('Generate Plugins Readme 👾')
     async docs() {
         await this.documentPlugins(...plugins);
     }
 
-    @Lane('Publish @fivethree/billy-plugin-markdown')
+    @Command('Publish @fivethree/billy-plugin-markdown')
     async publishMarkdownPlugin() {
         await this.updatePluginVersion('../markdown');
         await this.publishPlugin('../markdown');
@@ -129,17 +129,17 @@ export class Billy extends Plugins {
         }
     }
 
-    @Lane('Build plugins')
+    @Command('Build plugins')
     async build() {
         await this.buildPlugins(...plugins);
     }
 
-    @Lane('Clean install plugins')
+    @Command('Clean install plugins')
     async clean() {
         await this.cleanPlugins(...plugins);
     }
 
-    @Lane('Publish all plugins')
+    @Command('Publish all plugins')
     async publish() {
         await this.publishPlugins(...plugins);
     }

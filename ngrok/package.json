@@ -1,6 +1,6 @@
 {
     "name": "@fivethree/billy-plugin-ngrok",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "ngrok plugin for billy",
     "main": "dist/index.js",
     "scripts": {

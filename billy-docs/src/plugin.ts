@@ -58,15 +58,15 @@ export class BillyDocsPlugin {
 
     private visitClass(c: ClassDeclaration): BillyDocumentation {
 
-        const allowedDecorators = ['Lane', 'Scheduled', 'Hook', 'Webhook'];
+        const allowedDecorators = ['Command', 'Job', 'Hook', 'Webhook'];
 
         const methods = c.getMethods()
             .filter(method => method.getDecorators().some(dec => allowedDecorators.some(d => d === dec.getName())))
             .map(method => {
 
-                const description = !!method.getDecorator('Lane') ? method.getDecorator('Lane').getStructure().arguments[0] : '';
+                const description = !!method.getDecorator('Command') ? method.getDecorator('Command').getStructure().arguments[0] : '';
                 const formattedDescription = description ? description.substring(1, description.length - 1) : '';
-                const schedule = !!method.getDecorator('Scheduled') ? method.getDecorator('Scheduled').getStructure().arguments[0] : '';
+                const schedule = !!method.getDecorator('Job') ? method.getDecorator('Job').getStructure().arguments[0] : '';
                 const formattedSchedule = schedule ? schedule.substring(1, schedule.length - 1) : '';
                 const human = formattedSchedule ? cronstrue.toString(formattedSchedule) : '';
                 const hook = !!method.getDecorator('Hook') ? method.getDecorator('Hook').getStructure().arguments[0] : '';

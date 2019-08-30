@@ -1,31 +1,26 @@
 {
-    "name": "@fivethree/billy-plugin-git",
-    "version": "0.0.2",
-    "description": "example plugin for billy - your personal cli assistant.",
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "node_modules/.bin/tsc -p .",
-        "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-        "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
-    },
-    "keywords": [
-        "typescript",
-        "cli",
-        "node",
-        "terminal"
-    ],
-    "author": "garygrossgarten",
-    "license": "MIT",
-    "devDependencies": {
-        "axios": "^0.18.0",
-        "@types/node": "^10.12.18",
-        "nodemon": "^1.18.9",
-        "ts-node": "^7.0.1",
-        "@fivethree/billy-core": "0.9.3",
-        "typescript": "^3.2.2"
-    },
-    "dependencies": {
-        "@fivethree/billy-plugin-core": "^0.9.3",
-        "simple-git": "^1.107.0"
-    }
+  "name": "@fivethree/billy-plugin-git",
+  "version": "0.1.0",
+  "description": "simple git plugin for billy",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node_modules/.bin/tsc -p ."
+  },
+  "keywords": [
+    "typescript",
+    "cli",
+    "node",
+    "terminal"
+  ],
+  "author": "garygrossgarten",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "ts-node": "^7.0.1",
+    "@fivethree/billy-core": "0.15.4",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "simple-git": "^1.107.0"
+  }
 }
