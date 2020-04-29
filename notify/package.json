@@ -24,7 +24,7 @@
         "typescript": "^3.2.2"
     },
     "dependencies": {
-        "node-notifier": "^5.3.0",
+        "node-notifier": "^7.0.0",
         "@fivethree/billy-core": "0.9.2"
     }
 }
