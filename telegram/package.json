@@ -24,7 +24,7 @@
         "typescript": "^3.2.2"
     },
     "dependencies": {
-        "node-telegram-bot-api": "^0.30.0",
+        "node-telegram-bot-api": "^0.50.0",
         "telegraf": "^3.25.5",
         "@fivethree/billy-core": "0.9.2"
     }
